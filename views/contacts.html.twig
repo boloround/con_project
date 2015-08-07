@@ -2,15 +2,22 @@
     <head>
         <title>Add a contact</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <style media="screen">
+            ul {
+                list-style-type: none;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <h1>Your list of contacts</h1>
+                    //Hides the paragraph if contacts array is empty
                     {% if contacts is not empty %}
                     <p>Here are are your contacts</p>
                     <ul>
+                        //Loops through the contacts array and outputs each name, phone and address in a list
                         {% for contact in contacts %}
                         <li>{{contact.getName}}</li>
                         <li>{{contact.getPhone}}</li>
@@ -18,6 +25,7 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
+
                 </div>
                 <div class="col-sm-6">
                     <h1>Add your contact info</h1>
@@ -36,6 +44,7 @@
                         </div>
                         <button name="submit" class= "btn btn-success">Add contact</button>
                     </form>
+                    //Deletes all the entries in the list by re-setting the SESSION array to an empty array
                     <form action="/delete_contacts" method="post">
                         <button name="submit" class="btn btn-warning">Clear the address book</button>
                     </form>

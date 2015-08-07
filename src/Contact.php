@@ -41,17 +41,17 @@
         {
             return $this->address;
         }
-
+//Adds each new contact entry to the SESSION array list_of_contacts
         function save()
         {
             array_push($_SESSION['list_of_contacts'], $this);
         }
-
+//Static because it returns all objects of the class
         static function getAll()
         {
             return $_SESSION['list_of_contacts'];
         }
-
+        //Deletes all the entries in the list by re-setting the SESSION array to an empty array
         static function deleteAll()
         {
             $_SESSION['list_of_contacts'] = array();
