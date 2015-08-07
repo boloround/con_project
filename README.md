@@ -14,9 +14,9 @@ Clone this Github repository to your local system.
 
 ##Technologies used
 
-The app uses PHP, the silex micro-framework and Twig templates.
+The app uses PHP, the Silex micro-framework and Twig templates.
 
-Copyright (c) 2015 **_{Joe Hartman}_**
+Copyright (c) 2015 Joe Hartman
 
 This software is licensed under the MIT license.
 
